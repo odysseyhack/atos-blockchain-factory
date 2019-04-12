@@ -1,2 +1,2 @@
 exclude:
-  - /abf-genid-issuer-endpoint/mvn/.*
+  - /abf-genid-issuer-endpoint/.mvn/.*

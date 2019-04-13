@@ -27,7 +27,6 @@ class Login extends React.Component {
                     margin="normal"
                     variant="filled"
                 />
-                <Webcam/>
             </div>
         );
     };

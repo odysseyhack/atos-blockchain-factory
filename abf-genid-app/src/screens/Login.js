@@ -3,9 +3,12 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+
 
 const styles = {
     root: {
+        paddingTop: '16px',
         width: '100%',
         textAlign: 'center'
     },

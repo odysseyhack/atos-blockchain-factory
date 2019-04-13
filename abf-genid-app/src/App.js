@@ -35,7 +35,6 @@ class App extends Component {
           <Route path="/profile/" component={LoginDigiD} />
           <Route path="/help/" component={LoginDigiD} />
           <Route path="/settings/" component={LoginDigiD} />
-          <LoginDigiD/>
           <NavBar/>
         </Router>
       </MuiThemeProvider>

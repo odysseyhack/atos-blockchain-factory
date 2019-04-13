@@ -1,9 +1,13 @@
 package net.atos.abf.genidissuerendpoint.controllers;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.core.Is.isA;
 
 import javax.annotation.Resource;
+import javax.ws.rs.core.Response;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,7 +37,8 @@ public class RegistrationControllerTests {
                                 .build();
 
         
-        boolean result = controller.getRegistration(evidence);
-        assertThat(result, is(true));
+        Response result = controller.getRegistration(evidence);
+        assertThat(result.getStatus(), is(Response.Status.OK.getStatusCode()));
+        assertThat(result.getEntity().toString(), containsString("did:nlgov"));
 	}
 }

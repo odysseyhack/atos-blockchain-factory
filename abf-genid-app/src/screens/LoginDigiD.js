@@ -26,7 +26,7 @@ class LoginDigiD extends React.Component {
             <div className={classes.root}>
                 <div class="row">
                 <Typography variant="h8" color="inherit">
-                Voer uw DigiD gegevens in:
+                In deze app wordt u eenmalig gevraagd uw gebruikersnaam en wachtwoord in te vullen. Dit is nodig om de app te activeren.
                 </Typography>
                 </div>
                 <div class="row">

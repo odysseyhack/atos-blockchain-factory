@@ -22,6 +22,11 @@ class Login extends React.Component {
       return (
             <div className={classes.root}>
                 <div class="row">
+                    <Typography variant="h8" color="inherit">
+                    Voer pincode in om in te loggen.
+                    </Typography>
+                </div>
+                <div class="row">
                 <TextField
                     id="outlined-password-input"
                     label="Wachtwoord"

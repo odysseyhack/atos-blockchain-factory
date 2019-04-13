@@ -7,7 +7,6 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import Person from '@material-ui/icons/Person';
 import Settings from '@material-ui/icons/Settings';
 import AccountBox from '@material-ui/icons/AccountBox';
-import HelpOutline from '@material-ui/icons/HelpOutline';
 import FilterCenterFocus from '@material-ui/icons/FilterCenterFocus';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -16,6 +15,9 @@ const styles = {
       width: '100%',
       position: 'fixed',
       bottom: 0,
+    },
+    bottomAct: {
+      minWidth: "20px",
     },
 };
 
@@ -39,11 +41,10 @@ class NavBar extends React.Component {
             showLabels
             className={classes.root}
           >
-            <BottomNavigationAction label="Toon ID" icon={<AccountBox />} component={Link} to="/id"/>
-            <BottomNavigationAction label="Scan" icon={<FilterCenterFocus />} component={Link} to="/scan"/>
-            <BottomNavigationAction label="Profiel" icon={<Person />} component={Link} to="/profile"/>
-            <BottomNavigationAction label="Help" icon={<HelpOutline />} component={Link} to="/help"/>
-            <BottomNavigationAction label="Instellingen" icon={<Settings />} component={Link} to="/settings"/>
+            <BottomNavigationAction className="bot-act" label="Toon ID" icon={<AccountBox />} component={Link} to="/id"/>
+            <BottomNavigationAction className="bot-act" label="Scan" icon={<FilterCenterFocus />} component={Link} to="/scan"/>
+            <BottomNavigationAction className="bot-act" label="Profiel" icon={<Person />} component={Link} to="/profile"/>
+            <BottomNavigationAction className="bot-act" label="Instellingen" icon={<Settings />} component={Link} to="/settings"/>
           </BottomNavigation>
         );
     }

@@ -5,6 +5,7 @@ import TxtBoxUp from './components/TxtBoxUp'
 import Login from './screens/Login'
 import LoginDigiD from './screens/LoginDigiD'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const appTitle = "DigiD+";
 
@@ -28,8 +29,14 @@ class App extends Component {
 
       <MuiThemeProvider theme={theme}>
         <SimpleAppBar headerTitle={appTitle}/>
-        <LoginDigiD/>
-        <NavBar/>
+        <Router>
+          <Route path="/id" exact component={Login} />
+          <Route path="/scan/" component={LoginDigiD} />
+          <Route path="/profile/" component={LoginDigiD} />
+          <Route path="/help/" component={LoginDigiD} />
+          <Route path="/settings/" component={LoginDigiD} />
+          <NavBar/>
+        </Router>
       </MuiThemeProvider>
 
       );

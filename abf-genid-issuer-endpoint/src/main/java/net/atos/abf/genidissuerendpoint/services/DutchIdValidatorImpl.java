@@ -7,11 +7,11 @@ public class DutchIdValidatorImpl extends IdValidator {
     
     @Override
     public boolean validateBack(byte[] back) {
-        return false;
+        return true;
     }
 
     @Override
     public boolean validateFront(byte[] front) {
-        return false;
+        return true;
     }
 }

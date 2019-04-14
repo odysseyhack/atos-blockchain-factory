@@ -6,6 +6,8 @@ import LoginDigiD from './screens/LoginDigiD'
 import ScanFrontID from './screens/ScanFrontID'
 import ScanBackID from './screens/ScanBackID'
 import TakeFoto from './screens/TakeFoto'
+import Settings from './screens/Settings'
+import Id from './screens/Id'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -40,11 +42,11 @@ class App extends Component {
           <Route path="/scan-back/" component={ScanBackID} />
           <Route path="/take-photo/" component={TakeFoto} />
 
-          <Route path="/id" component={Login} />
+          <Route path="/id/" component={Id} />
           <Route path="/scan/" component={ScanFrontID} />
 
-          <Route path="/profile/" component={LoginDigiD} />
-          <Route path="/settings/" component={LoginDigiD} />
+          <Route path="/profile/" component={Login} />
+          <Route path="/settings/" component={Settings} />
           <NavBar/>
         </Router>
       </MuiThemeProvider>

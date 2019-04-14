@@ -36,6 +36,7 @@ class ScanFrontID extends React.Component {
                     linkTo="/scan-back/"
                     camWidth="350"
                     camHeigth="350"
+                    buttonText="Scan voorkant"
                 />
             </div>
 

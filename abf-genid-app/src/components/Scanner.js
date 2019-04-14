@@ -33,9 +33,9 @@ class Scanner extends React.Component {
         return (
             <div className={classes.root}>
                 <div class="row">
+
                     <Typography variant="h8" color="inherit">
                     {this.props.text}
-
                     </Typography>
                 </div>
                 <div class="row" className={classes.root}>
@@ -54,7 +54,7 @@ class Scanner extends React.Component {
                         videoConstraints={this.props.vidCon}
                         className={classes.button}
                         onClick={this.props.onTakeFoto}>
-                        Scan ID Kaart
+                        {this.props.buttonText}
                     </Button>
                 </div>
             </div>

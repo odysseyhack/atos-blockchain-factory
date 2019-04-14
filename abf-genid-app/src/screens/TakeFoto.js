@@ -33,7 +33,7 @@ class TakeFoto extends React.Component {
                 <Scanner
                     text="Voor gezichtsherkenning vergelijken we het camerabeeld met de foto van uw rijbewijs of identiteitsbewijs."
                     vidCon={videoConstraints}
-                    linkTo="/id/"
+                    linkTo="/profile/"
                     camWidth="350"
                     camHeigth="350"
                     buttonText="maak een foto"

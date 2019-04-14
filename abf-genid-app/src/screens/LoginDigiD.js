@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const styles = {
     root: {
@@ -51,6 +52,7 @@ class LoginDigiD extends React.Component {
                 </div>
                 <div class="row" className={classes.root}>
                     <Button
+                        component={Link} to="/scan-front/"
                         variant="contained"
                         color="primary"
                         margin="normal"

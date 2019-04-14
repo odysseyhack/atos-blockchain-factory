@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Webcam from 'react-webcam';
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const styles = {
     root: {
@@ -51,6 +51,7 @@ class ScanBackID extends React.Component {
                     width="350"
                     />
                     <Button
+                        component={Link} to="/take-photo/"
                         variant="contained"
                         color="primary"
                         margin="normal"

@@ -35,8 +35,14 @@ class App extends Component {
         <SimpleAppBar headerTitle={appTitle}/>
         <Router>
           <Route path="/" exact component={Login} />
+          <Route path="/login-digid/" component={LoginDigiD} />
+          <Route path="/scan-front/" component={ScanFrontID} />
+          <Route path="/scan-back/" component={ScanBackID} />
+          <Route path="/take-photo/" component={TakeFoto} />
+          
           <Route path="/id" component={Login} />
           <Route path="/scan/" component={TakeFoto} />
+
           <Route path="/profile/" component={LoginDigiD} />
           <Route path="/settings/" component={LoginDigiD} />
           <NavBar/>

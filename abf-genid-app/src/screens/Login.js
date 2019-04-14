@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const styles = {
     root: {
@@ -41,6 +41,7 @@ class Login extends React.Component {
                 </div>
                 <div class="row">
                 <Button
+                    component={Link} to="/login-digid/"
                     variant="contained"
                     color="primary"
                     margin="normal"

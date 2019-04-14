@@ -39,9 +39,9 @@ class App extends Component {
           <Route path="/scan-front/" component={ScanFrontID} />
           <Route path="/scan-back/" component={ScanBackID} />
           <Route path="/take-photo/" component={TakeFoto} />
-          
+
           <Route path="/id" component={Login} />
-          <Route path="/scan/" component={TakeFoto} />
+          <Route path="/scan/" component={ScanFrontID} />
 
           <Route path="/profile/" component={LoginDigiD} />
           <Route path="/settings/" component={LoginDigiD} />

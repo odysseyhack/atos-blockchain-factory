@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Webcam from 'react-webcam';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Scanner from '../components/Scanner';
 
 const styles = {
     root: {
@@ -18,14 +19,6 @@ const styles = {
 };
 
 class ScanBackID extends React.Component {
-    setRef = webcam => {
-        this.webcam = webcam;
-    };
-
-    capture = () => {
-        const imageSrc = this.webcam.getScreenshot();
-    };
-
     render() {
         const { classes } = this.props;
 
@@ -37,29 +30,13 @@ class ScanBackID extends React.Component {
 
         return (
             <div className={classes.root}>
-                <div class="row">
-                    <Typography variant="h8" color="inherit">
-                    Maak foto van de achterkant van uw rijbewijs of identiteitsbewijs.
-                    </Typography>
-                </div>
-                <div class="row" className={classes.root}>
-                    <Webcam
-                    audio={false}
-                    ref={this.setRef}
-                    screenshotFormat="image/jpeg"
-                    height="350"
-                    width="350"
-                    />
-                    <Button
-                        component={Link} to="/take-photo/"
-                        variant="contained"
-                        color="primary"
-                        margin="normal"
-                        className={classes.button}
-                        onClick={this.props.onTakeFoto}>
-                        Scan ID Kaart
-                    </Button>
-                </div>
+                <Scanner
+                    text="Maak foto van de achterkant van uw rijbewijs of identiteitsbewijs."
+                    vidCon={videoConstraints}
+                    linkTo="/take-photo/"
+                    camWidth="350"
+                    camHeigth="350"
+                />
             </div>
         );
     };

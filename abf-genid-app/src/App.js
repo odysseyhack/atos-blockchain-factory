@@ -4,6 +4,8 @@ import SimpleAppBar from './components/Header';
 import Login from './screens/Login'
 import LoginDigiD from './screens/LoginDigiD'
 import ScanFrontID from './screens/ScanFrontID'
+import ScanBackID from './screens/ScanBackID'
+import TakeFoto from './screens/TakeFoto'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -34,7 +36,7 @@ class App extends Component {
         <Router>
           <Route path="/" exact component={Login} />
           <Route path="/id" component={Login} />
-          <Route path="/scan/" component={LoginDigiD} />
+          <Route path="/scan/" component={TakeFoto} />
           <Route path="/profile/" component={LoginDigiD} />
           <Route path="/settings/" component={LoginDigiD} />
           <NavBar/>

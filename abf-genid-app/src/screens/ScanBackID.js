@@ -17,7 +17,7 @@ const styles = {
     }
 };
 
-class ScanFrontID extends React.Component {
+class ScanBackID extends React.Component {
     setRef = webcam => {
         this.webcam = webcam;
     };
@@ -39,7 +39,7 @@ class ScanFrontID extends React.Component {
             <div className={classes.root}>
                 <div class="row">
                     <Typography variant="h8" color="inherit">
-                    Maak foto van de voorkant van uw rijbewijs of identiteitsbewijs.
+                    Maak foto van de achterkant van uw rijbewijs of identiteitsbewijs.
                     </Typography>
                 </div>
                 <div class="row" className={classes.root}>
@@ -64,8 +64,8 @@ class ScanFrontID extends React.Component {
     };
   };
 
-ScanFrontID.propTypes = {
+ScanBackID.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ScanFrontID);
+export default withStyles(styles)(ScanBackID);

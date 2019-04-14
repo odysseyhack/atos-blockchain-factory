@@ -17,7 +17,7 @@ const styles = {
     }
 };
 
-class ScanFrontID extends React.Component {
+class TakeFoto extends React.Component {
     setRef = webcam => {
         this.webcam = webcam;
     };
@@ -30,8 +30,8 @@ class ScanFrontID extends React.Component {
         const { classes } = this.props;
 
         const videoConstraints = {
-            width: 1280,
-            height: 720,
+            width: 720,
+            height: 1280,
             facingMode: "user"
         };
 
@@ -39,7 +39,7 @@ class ScanFrontID extends React.Component {
             <div className={classes.root}>
                 <div class="row">
                     <Typography variant="h8" color="inherit">
-                    Maak foto van de voorkant van uw rijbewijs of identiteitsbewijs.
+                    Voor gezichtsherkenning vergelijken we het camerabeeld met de foto van uw rijbewijs of identiteitsbewijs.
                     </Typography>
                 </div>
                 <div class="row" className={classes.root}>
@@ -47,6 +47,7 @@ class ScanFrontID extends React.Component {
                     audio={false}
                     ref={this.setRef}
                     screenshotFormat="image/jpeg"
+                    videoConstraints={videoConstraints}
                     height="350"
                     width="350"
                     />
@@ -56,7 +57,7 @@ class ScanFrontID extends React.Component {
                         margin="normal"
                         className={classes.button}
                         onClick={this.props.onTakeFoto}>
-                        Scan ID Kaart
+                        Maak foto
                     </Button>
                 </div>
             </div>
@@ -64,8 +65,8 @@ class ScanFrontID extends React.Component {
     };
   };
 
-ScanFrontID.propTypes = {
+TakeFoto.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ScanFrontID);
+export default withStyles(styles)(TakeFoto);
